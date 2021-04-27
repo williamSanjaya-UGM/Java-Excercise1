@@ -54,7 +54,7 @@ public class Main {
         return sb.substring(0, sb.length() - 1)+","+strings.get(1);
     }).collect(Collectors.toList());
 
-    // example, by using imperative prgramming
+    // example, by using imperative programming
     private static List<String> swapFirstAndLastIndex(List<List<String>> collectList){
         return collectList.stream().map(strings -> {
             String[] split = strings.get(0).split("[ ]");
