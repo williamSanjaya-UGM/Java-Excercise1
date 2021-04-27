@@ -13,7 +13,7 @@ toHexDecimal:
 1. add+2 to every string, ex "hello" become "jgnnq"
 2. try hashfunction by using HashMap
 
-validation: using combinator design pattern to validate Customer registration
+validation: using combinator design pattern to validate Customer registration (also by the help of using regex match pattern)
 
 Tips: some useful stream methods;
 
