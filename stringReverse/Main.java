@@ -16,7 +16,10 @@ public class Main {
         // consider distinct is a must cause for exercise (not using Set interface)
         List<String> collectName = nameLists.stream().distinct().collect(Collectors.toList());
 
-        showOutput.accept(outputLimitList.apply(collectName));
+        List<String> outputLists = outputLimitList.apply(collectName);
+        Collections.sort(outputLists);
+
+        showOutput.accept(outputLists);
     }
 
     private static List<String> readFile(File file){
@@ -34,17 +37,25 @@ public class Main {
 
     // limit by 4 parallel
     // if there is william, drop it
-    private static Function<List<String>,List<StringBuilder>> outputLimitList= collectName -> collectName
+    private static Function<List<String>,List<String>> outputLimitList= collectName -> collectName
             .stream().dropWhile(s -> s.contains("William")).map(s -> {
-        String[] split = s.split("");
-        Collections.reverse(Arrays.asList(split));
+        String[] split = s.split(" ");
 
-        StringBuilder sb = new StringBuilder();
-        for (String word : split) {
-            sb.append(word);
-        }
-        return sb;
-    }).collect(Collectors.toList()).stream().parallel().limit(4).collect(Collectors.toList());
+        return reverseCharInWord(split);
+    }).collect(Collectors.toList()).stream().parallel().limit(5).collect(Collectors.toList());
 
-    private static Consumer<List<StringBuilder>> showOutput= System.out::println;
+    private static String reverseCharInWord(String[] split){
+        return Arrays.stream(split).map(s1 -> {
+            String[] split1 = s1.split("");
+            Collections.reverse(Arrays.asList(split1));
+
+            StringBuilder sb = new StringBuilder();
+            for (String word : split1) {
+                sb.append(word);
+            }
+            return sb;
+        }).collect(Collectors.joining(" "));
+    }
+
+    private static Consumer<List<String>> showOutput= System.out::println;
 }
