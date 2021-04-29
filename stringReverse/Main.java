@@ -17,6 +17,8 @@ public class Main {
         List<String> collectName = nameLists.stream().distinct().collect(Collectors.toList());
 
         List<String> outputLists = outputLimitList.apply(collectName);
+
+        // sort result
         Collections.sort(outputLists);
 
         showOutput.accept(outputLists);
@@ -35,14 +37,14 @@ public class Main {
         return nameLists;
     }
 
-    // limit by 4 parallel
+    // limit by 4 (parallel is a must)
     // if there is william, drop it
     private static Function<List<String>,List<String>> outputLimitList= collectName -> collectName
             .stream().dropWhile(s -> s.contains("William")).map(s -> {
         String[] split = s.split(" ");
 
         return reverseCharInWord(split);
-    }).collect(Collectors.toList()).stream().parallel().limit(5).collect(Collectors.toList());
+    }).parallel().limit(5).collect(Collectors.toList());
 
     private static String reverseCharInWord(String[] split){
         return Arrays.stream(split).map(s1 -> {

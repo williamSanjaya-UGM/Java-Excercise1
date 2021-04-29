@@ -1,0 +1,10 @@
+William ,10000
+Sanjaya ,20000
+Smith, 35000
+John, 40000
+Greg, 5000
+Mikey,90000
+Hosean,10000
+Stewart, 30000
+James,70000
+Gillian,25000

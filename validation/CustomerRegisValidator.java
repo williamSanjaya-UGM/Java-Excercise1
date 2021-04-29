@@ -16,12 +16,21 @@ public interface CustomerRegisValidator extends Function<Customer, ValidationRes
         return customer -> {
             String phoneNumber =customer.getPhoneNumber();
             if(phoneNumber.startsWith("+62")&&customer.getPhoneNumber().length()>=11){
-                if(phoneNumber.substring(3).matches("[0-9]+")){
-                    return SUCCESS;
-                }
-            }
-            return PHONE_NUMBER_NOT_VALID;
+                return validationCheck(phoneNumber);
+            }else if(phoneNumber.startsWith("0")&&customer.getPhoneNumber().length()>=10) {
+                return validationCheck(phoneNumber.replaceFirst("0", "+62"));
+            }else
+                return PHONE_NUMBER_NOT_VALID;
         };
+    }
+
+    private static ValidationResult validationCheck(String phoneNumber){
+        if(phoneNumber.substring(3).matches("[0-9]+")){
+            return SUCCESS;
+        }else{
+            System.out.println("failed "+phoneNumber);
+            return PHONE_NUMBER_NOT_VALID;
+        }
     }
 
     default CustomerRegisValidator and(CustomerRegisValidator other){
