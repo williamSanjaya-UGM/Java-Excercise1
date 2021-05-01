@@ -6,6 +6,8 @@ duelScore: based on input, search the corresponding match word from scoring.txt.
 
 experiments: Doing experiment on making custom annotation and also java.lang.reflect package
 
+markerInterface: Simple example how to create and the usage of marker Interface
+
 moneyConvert: convert String number into Rupiah, by using Locale and NumberFormat
 
 rupiah: a very simple exercise, converting array of integer into array of String
