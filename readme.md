@@ -20,14 +20,19 @@ gembok: give combination to open the lock
 5867 , the starting value
 8919 , the value need to unlock
 
-> > > > > > > > > > <<<<<<>
-> > > > > > > > > > <
-> > > > > > > > > > output: "TERBUKA"
+">>>"
+">>>>>>>>>>"
+"<<<<<<>"
+">>><><"
+output: "TERBUKA"
 
 12345
 34567
-
-> output: "TERKUNCI"
+">"
+">"
+">"
+">"
+output: "TERKUNCI"
 
 markerInterface: Simple example how to create and the usage of marker Interface
 
