@@ -46,6 +46,8 @@ rupiah: a very simple exercise, converting array of integer into array of String
 
 salary: make simple encryption, which only display the first letter and last two letter found from the input name, and hide the last 3 digits of salary. I used 2 kind of version to do the simple encryption, first one is by doing substring and replaceAll, second one is by doing StringBuilder and for loop combined with if else
 
+segregate0S: separate 0 and 1, put 1 on the left and 0 on the right
+
 stringReverse: limit distinct list by 5 and also word "William" may not be in the list, and then reverse every characters (should not swap the word), last sort the result asc
 
 testRmi: testing Java RMI (Remote Method Invocation)
