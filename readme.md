@@ -50,6 +50,8 @@ segregate0S: separate 0 and 1, put 1 on the left and 0 on the right
 
 stringReverse: limit distinct list by 5 and also word "William" may not be in the list, and then reverse every characters (should not swap the word), last sort the result asc
 
+StringVsStringBuffer: the difference between String and StringBuffer
+
 testRmi: testing Java RMI (Remote Method Invocation)
 
 toHexDecimal:
