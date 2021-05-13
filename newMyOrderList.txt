@@ -1,0 +1,5 @@
+OrderList{orderName='Nasi goreng ayam', orderQty=2}
+OrderList{orderName='Mie Ayam', orderQty=2}
+OrderList{orderName='Pangsit Goreng', orderQty=3}
+OrderList{orderName='Es Teh', orderQty=4}
+OrderList{orderName='Es Teler', orderQty=1}

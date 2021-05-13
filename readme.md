@@ -42,6 +42,8 @@ numSpace: count the amount of whitespace from the input string
 
 numVowels: count the amount of vowels letter from the input
 
+orderInsertion: Assume like doing insert into a database, it will read order from myOrderList.txt and then write it into newMyOrderList.txt using FileWriter and BufferedWriter. It will also count the total qty of your purchased item.
+
 rupiah: a very simple exercise, converting array of integer into array of String
 
 salary: make simple encryption, which only display the first letter and last two letter found from the input name, and hide the last 3 digits of salary. I used 2 kind of version to do the simple encryption, first one is by doing substring and replaceAll, second one is by doing StringBuilder and for loop combined with if else
