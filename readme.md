@@ -10,6 +10,9 @@ caesarCipher: a simple CaesarCipher algorithm, the formula;
 E=(p+k) Mod 26, ex:k=3, so: E=(p+3) Mod 26
 D=(c-k) Mod 26, ex:k=3, so: D=(c-3) Mod 26
 
+checkTypes: example of making generic Types in java. The Main class with typeChecker method will check the generic/class which is inputted into the method.
+The MainBird will show the usage of class with custom generic type and interface
+
 duelScore: based on input, search the corresponding match word from scoring.txt. Then sort the result from the lowest score until the highest. Give the final result by swapping the first name and the last name
 
 experiments: Doing experiment on making custom annotation and also java.lang.reflect package
