@@ -45,6 +45,9 @@ numSpace: count the amount of whitespace from the input string
 
 numVowels: count the amount of vowels letter from the input
 
+objComparingIter: comparing pkg show how to use and the different between Comparator and Comparable interface
+iterate pkg show the use of Iterator interface
+
 orderInsertion: Assume like doing insert into a database, it will read order from myOrderList.txt and then write it into newMyOrderList.txt using FileWriter and BufferedWriter. It will also count the total qty of your purchased item.
 
 rupiah: a very simple exercise, converting array of integer into array of String
